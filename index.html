@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <div class="screen" data-screen>0</div>
+      <div class="keys">
+        <button class="seven" data-type="number">7</button>
+        <button class="eight" data-type="number">8</button>
+        <button class="nine" data-type="number">9</button>
+        <button class="four" data-type="number">4</button>
+        <button class="five" data-type="number">5</button>
+        <button class="six" data-type="number">6</button>
+        <button class="one" data-type="number">1</button>
+        <button class="two" data-type="number">2</button>
+        <button class="three" data-type="number">3</button>
+        <button class="zero" data-type="number">0</button>
+        <button class="negation" data-type="negation">
+          <sup>+</sup>/<sub>-</sub>
+        </button>
+        <button class="decimal" data-type="decimal">.</button>
+
+        <button
+          class="special-sign divide"
+          data-type="twoArgsOperator"
+          data-sign="divide"
+        >
+          &divide;
+        </button>
+        <button
+          class="special-sign times"
+          data-type="twoArgsOperator"
+          data-sign="times"
+        >
+          &times;
+        </button>
+        <button
+          class="special-sign minus"
+          data-type="twoArgsOperator"
+          data-sign="minus"
+        >
+          -
+        </button>
+        <button
+          class="special-sign plus"
+          data-type="twoArgsOperator"
+          data-sign="plus"
+        >
+          +
+        </button>
+
+        <button class="special-sign back" data-type="back">&lArr;</button>
+        <button class="special-sign C" data-type="C">C</button>
+        <button
+          class="special-sign percent"
+          data-type="oneArgOperator"
+          data-sign="percent"
+        >
+          %
+        </button>
+        <button
+          class="special-sign reciprocal"
+          data-type="oneArgOperator"
+          data-sign="reciprocal"
+        >
+          1/x
+        </button>
+        <button
+          class="special-sign power"
+          data-type="oneArgOperator"
+          data-sign="power"
+        >
+          x<sup>2</sup>
+        </button>
+        <button
+          class="special-sign sqrt"
+          data-type="oneArgOperator"
+          data-sign="sqrt"
+        >
+          &Sqrt;
+        </button>
+
+        <button class="special-sign equal" data-type="equal">=</button>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

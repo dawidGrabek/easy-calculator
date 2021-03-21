@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color-primary: #99c2ff;
+  --background-color-secondary: #333;
+  --font-color-primary: #111;
+
+  --white: #fff;
+  --primary-color: #fdf6f0;
+  --sign-color: #ffdac4;
+  --secondary-color-equal: #ffcc9f;
+  --hover-focus-color: #ffc18b;
+}
+
+html {
+  font-size: 36px;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background-color-primary);
+  color: var(--font-color-primary);
+}
+
+.calculator {
+  width: 500px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-secondary);
+  box-shadow: 0px 0px 25px -4px #000000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.screen {
+  width: 100%;
+  font-size: 1.1rem;
+  color: var(--white);
+  text-align: right;
+  padding: 0.5rem 0.75rem;
+}
+
+.keys {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*in term of having the same width of keys*/
+  grid-template-areas:
+    'back C percent divide'
+    'reciprocal power sqrt times'
+    'seven eight nine minus'
+    'four five six plus'
+    'one two three equal'
+    'negation zero decimal equal';
+  grid-gap: 1px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.5rem;
+  color: inherit;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--hover-focus-color);
+}
+
+[data-type='number'] {
+  background-color: var(--primary-color);
+}
+
+.special-sign {
+  background-color: var(--sign-color);
+}
+
+.percent {
+  grid-area: percent;
+}
+
+.back {
+  grid-area: back;
+}
+
+.C {
+  grid-area: C;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.reciprocal {
+  grid-area: reciprocal;
+}
+
+.power {
+  grid-area: power;
+}
+
+.sqrt {
+  grid-area: sqrt;
+}
+
+.times {
+  grid-area: times;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.negation {
+  grid-area: negation;
+  background-color: var(--primary-color);
+}
+
+.negation > *,
+.power > * {
+  pointer-events: none;
+}
+
+.decimal {
+  grid-area: decimal;
+  background-color: var(--primary-color);
+}
+
+.equal {
+  grid-area: equal;
+  background-color: var(--secondary-color-equal);
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.six {
+  grid-area: six;
+}
+
+.five {
+  grid-area: five;
+}
+
+.four {
+  grid-area: four;
+}
+
+.three {
+  grid-area: three;
+}
+
+.two {
+  grid-area: two;
+}
+
+.one {
+  grid-area: one;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.active {
+  background-color: var(--hover-focus-color);
+}
