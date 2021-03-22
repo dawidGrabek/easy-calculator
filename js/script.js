@@ -152,5 +152,5 @@ class Calculator {
   }
 }
 
-const hmmm = new Calculator();
-hmmm.initialApp();
+const calculator = new Calculator();
+calculator.initialApp();
