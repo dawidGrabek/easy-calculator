@@ -1,6 +1,5 @@
-import { Calculator } from './calculator'
-import { DOMElements } from './DOMElements'
+import { Calculator } from './calculator.js'
+import { DOMElements } from './DOMElements.js'
 
-console.log('harnas')
 const calculator = new Calculator(DOMElements)
 calculator.initialApp()
