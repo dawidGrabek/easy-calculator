@@ -4,7 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "babel ./js/main.js --out-dir-build --ignore 'js/*test.js'",
+    "start": "npm run build && node ./build/main.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/dawidGrabek/easy-calculator/issues"
   },
-  "homepage": "https://github.com/dawidGrabek/easy-calculator#readme"
+  "homepage": "https://github.com/dawidGrabek/easy-calculator#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@babel/preset-env": "^7.14.2",
+    "babel-jest": "^27.0.1",
+    "jest": "^27.0.1"
+  }
 }

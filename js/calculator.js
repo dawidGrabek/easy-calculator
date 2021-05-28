@@ -143,4 +143,7 @@ export class Calculator {
   plusOperation(num1, num2) {
     this._elements.screen.textContent = +num1 + +num2
   }
+  hej(a, b, c) {
+    return a + b + c
+  }
 }
